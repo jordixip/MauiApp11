@@ -3,3 +3,18 @@
 <h3>Settings</h3>
 
 <p>Esta es la página de configuración.</p>
+
+<!-- Compare this snippet from MauiApp11.Shared/Pages/Weather.razor: -->
+
+
+<p>Esta es la página de configuración.</p>
+
+<EditForm Model="@eventDate">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <InputDate @bind-Value="eventDate" />
+</EditForm>
+
+@code {
+    private DateTime eventDate = DateTime.Now;
+}
