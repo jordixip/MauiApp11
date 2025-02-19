@@ -1,4 +1,4 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<div class="top-row ps-3 navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="">MauiApp11</a>
     </div>
@@ -13,18 +13,60 @@
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
         </div>
-
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
                 <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
             </NavLink>
         </div>
-
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="weather">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="deepseek">
+                <span class="bi bi-search-nav-menu" aria-hidden="true"></span> DeepSeek
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="profile">
+                <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span> Profile
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="settings">
+                <span class="bi bi-gear-fill-nav-menu" aria-hidden="true"></span> Settings
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="about">
+                <span class="bi bi-info-circle-fill-nav-menu" aria-hidden="true"></span> About
+            </NavLink>
+        </div>
     </nav>
 </div>
 
+<style>
+    .navbar-brand {
+        font-size: 1.25rem;
+        color: #fff;
+    }
+
+    .nav-link {
+        font-size: 0.875rem;
+        color: #fff;
+    }
+
+    .nav-link:hover {
+        color: #ffcc00;
+    }
+
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-scrollable {
+        background-color: #343a40;
+        padding: 1rem;
+    }
+</style>
