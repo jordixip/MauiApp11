@@ -1,0 +1,53 @@
+﻿@page "/deepseek"
+
+<h3>DeepSeek - Nuevo Pedido</h3>
+
+<EditForm Model="@pedido" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label for="cliente" class="form-label">Cliente</label>
+        <InputText id="cliente" class="form-control" @bind-Value="pedido.Cliente" />
+    </div>
+    <div class="mb-3">
+        <label for="producto" class="form-label">Producto</label>
+        <InputText id="producto" class="form-control" @bind-Value="pedido.Producto" />
+    </div>
+    <div class="mb-3">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <InputNumber id="cantidad" class="form-control" @bind-Value="pedido.Cantidad" />
+    </div>
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <InputNumber id="precio" class="form-control" @bind-Value="pedido.Precio" />
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</EditForm>
+
+@code {
+    private Pedido pedido = new Pedido();
+
+    private async Task HandleValidSubmit()
+    {
+      /*  using (var connection = new SqlConnection("your_connection_string"))
+        {
+            await connection.OpenAsync();
+            var command = new SqlCommand("INSERT INTO Pedidos (Cliente, Producto, Cantidad, Precio) VALUES (@Cliente, @Producto, @Cantidad, @Precio)", connection);
+            command.Parameters.AddWithValue("@Cliente", pedido.Cliente);
+            command.Parameters.AddWithValue("@Producto", pedido.Producto);
+            command.Parameters.AddWithValue("@Cantidad", pedido.Cantidad);
+            command.Parameters.AddWithValue("@Precio", pedido.Precio);
+
+            await command.ExecuteNonQueryAsync();
+        } */
+    }
+
+    public class Pedido
+    {
+        public string Cliente { get; set; }
+        public string Producto { get; set; }
+        public int Cantidad { get; set; }
+        public decimal Precio { get; set; }
+    }
+}
